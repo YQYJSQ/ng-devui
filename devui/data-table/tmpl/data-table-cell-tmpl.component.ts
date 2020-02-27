@@ -10,8 +10,8 @@ import { DataTableCellFilterTmplComponent } from './data-table-cell-filter-tmpl.
 })
 export class DataTableCellTmplComponent {
   @Input() type: string;
-  @ContentChild(DataTableCellViewTmplComponent) view: DataTableCellViewTmplComponent;
-  @ContentChild(DataTableCellEditTmplComponent) edit: DataTableCellEditTmplComponent;
-  @ContentChild(DataTableCellFilterTmplComponent) filter: DataTableCellFilterTmplComponent;
+  @ContentChild(DataTableCellViewTmplComponent, { static: false }) view: DataTableCellViewTmplComponent;
+  @ContentChild(DataTableCellEditTmplComponent, { static: false }) edit: DataTableCellEditTmplComponent;
+  @ContentChild(DataTableCellFilterTmplComponent, { static: false }) filter: DataTableCellFilterTmplComponent;
 
 }
